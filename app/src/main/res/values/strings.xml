@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Stock Pulse</string>
+    <string name="divider">............................................................................................................................................................................................................</string>
+    <string name="set_param">Set Parameter</string>
+</resources>

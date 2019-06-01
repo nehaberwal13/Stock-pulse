@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.app.criteria_parser.data.model.Variable" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_001921"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:text="@{viewModel.study_type}"
+            tools:text="Android" />
+
+        <TextView
+            android:id="@+id/tv_set_param"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="@color/white"
+            android:text="@string/set_param"
+             />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_parameter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/black"
+                android:padding="@dimen/dp_20"
+                android:text="@{viewModel.parameter_name}"
+                tools:text="Android" />
+
+            <EditText
+                android:id="@+id/et_default_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_parameter_name"
+                android:layout_alignBottom="@+id/tv_parameter_name"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:inputType="number"
+                android:maxLength="50"
+                android:padding="@dimen/dp_20"
+                android:text="@{viewModel.default_value.toString()}"
+                tools:text="Android" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>
